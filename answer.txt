@@ -1,0 +1,16 @@
+Q1: What happens if users choose “Cancel”?
+A: Nếu chọn "Cancel" thì hộp thoại Message sẽ hiển thị "You've chosen: No"
+
+Q2: How to customize the options to users, e.g. only two options: “Yes” and “No”, OR “I do” and “I don’t” (Suggestion: Use Javadocs or using Eclipse/Netbean IDE help). 
+A: Để điều chỉnh các lựa chọn, ta có thể thay đổi đầu vào của hàm showConfirmDialog. Có thể thay tham số "optionType" trong các hàm sau:
+
+showConfirmDialog(Component parentComponent, Object message, String title, int optionType)
+showConfirmDialog(Component parentComponent, Object message, String title, int optionType, int messageType)
+showConfirmDialog(Component parentComponent, Object message, String title, int optionType, int messageType, Icon icon)
+
+Chúng ta có thể thay tham số "optionType" thành 1 trong các lựa chọn sau (tùy nhu cầu):
+YES_NO_OPTION
+OK_CANCEL_OPTION
+YES_NO_CANCEL_OPTION
+
+Không thể đổi lựa chọn thành "I do" và "I don't" với hàm showConfirmDialog.
